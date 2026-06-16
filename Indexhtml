@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AR Menu</title>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      font-family: Arial;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 85vh;
+    }
+
+    .info {
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <model-viewer
+    src="burger.glb"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    camera-controls
+    auto-rotate
+    shadow-intensity="1"
+    exposure="1"
+    min-pitch="0deg"
+    max-pitch="75deg"
+    style="background: #111;">
+  </model-viewer>
+
+  <div class="info">
+    🍔 Scan → View in AR → Rotate → Experience Food
+  </div>
+
+</div>
+
+</body>
+</html>
